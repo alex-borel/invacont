@@ -32,23 +32,45 @@
     src: url("fonts/HelveticaNeueCyr-Light.otf");
 }
 
-.wrapper {
+.container {
     max-width: 1280px;
-    min-height: 2213px;
     margin: 0 auto;
 }
 
 .main-header {
-    min-height: 870px;
+    position: relative;
+    min-height: 871px;
     border-top: 1px solid transparent;
     border-bottom: 4px solid #e46107;
     background: url("../img/background-top.jpg") no-repeat center top;
     background-size: cover;
 }
 
+.logo {
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    margin-left: -157px;
+}
+
+.ellipse {
+    position: absolute;
+    top: 187px;
+    left: 50%;
+    margin-left: -462px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.active i {
+    color: orange;
+}
+
 .main-navigation {
-    width: 550px;
-    margin-top: 200px;
+    width: 600px;
+    margin-top: 197px;
     margin-right: auto;
     margin-left: auto;
     font-size: 0;
@@ -56,7 +78,7 @@
 
 .main-navigation li {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 15px 20px;
 }
 
 .main-navigation li:hover {
@@ -73,6 +95,7 @@
 }
 
 .main-header h1 {
+    margin-top: 39px;
     text-align: center;
     color: #f1f2f5;
     text-shadow: 0 0 6px rgba(31, 88, 0, 0.75);
@@ -88,7 +111,7 @@
     margin-top: -20px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 20px;
+    padding: 20px 0px;
     border-radius: 5px;
     background-color: rgba(38, 49, 28, 0.7);
 }
@@ -103,8 +126,10 @@
 }
 
 .header-text p {
+    width: 90%;
     margin-top: 15px;
-    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
     color: rgba(255, 255, 255, 0.8);
     font-family: "Arial", sans-serif;
     font-size: 14px;
@@ -112,25 +137,23 @@
     line-height: 25px;
 }
 
-main {
-    min-height: 1215px;
+.items-list {
+    height: 679px;
     background-color: #26311c;
 }
 
-.items-list {
+.items-list .container {
     position: relative;
     top: -120px;
-    min-height: 680px;
-    margin-bottom: -73px;
 }
 
 .top-items {
-    max-width: 920px;
+    max-width: 885px;
     margin: 0 auto;
 }
 
 .bottom-items {
-    max-width: 570px;
+    max-width: 548px;
     margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
@@ -141,15 +164,13 @@ main img {
     border-radius: 50%;
 }
 
-main li {
-    display: inline-block;
-    width: 23%;
-    margin-left: 14%;
+main ul {
+    font-size: 0;
 }
 
-.bottom-items li {
-    width: 38%;
-    margin-left: 21%;
+main li {
+    display: inline-block;
+    margin-left: 110px;
 }
 
 main li:first-child {
@@ -157,13 +178,17 @@ main li:first-child {
 }
 
 main h3 {
-    margin-top: 25px;
+    margin-top: 30px;
     text-align: center;
     color: #f1f2f5;
     font-family: "Helvetica", "Arial", sans-serif;
     font-size: 34px;
     font-weight: 300;
     line-height: 40px;
+}
+
+.bottom-items h3 {
+    margin-top: 28px;
 }
 
 main .btn {
@@ -183,6 +208,10 @@ main .btn {
     font-size: 19px;
     font-weight: 400;
     line-height: 40px;
+}
+
+.bottom-items .btn {
+    margin-left: 23px;
 }
 
 main .btn:hover {
@@ -211,7 +240,7 @@ main .btn:hover {
 }
 
 .benefits h2 {
-    margin-top: -5px;
+    margin-top: 0px;
     text-align: left;
     color: #000;
     font-family: "Helvetica", "Arial", sans-serif;
@@ -221,6 +250,8 @@ main .btn:hover {
 }
 
 .benefits span {
+    display: inline-block;
+    margin-top: -6px;
     color: #47890a;
     font-size: 54px;
     font-weight: 700;
@@ -235,6 +266,7 @@ main .btn:hover {
 }
 
 .benefits .btn {
+    margin-top: 16px;
     margin-left: 0;
     border-color: white;
 }
@@ -244,20 +276,17 @@ main .btn:hover {
     border-color: #48890a;
 }
 
-.footer-navigation {
-    min-height: 55px;
-}
-
 .footer-navigation ul {
     width: 510px;
-    margin-top: 10px;
+    margin-top: 12px;
     margin-right: auto;
+    margin-bottom: 12px;
     margin-left: auto;
 }
 
 .footer-navigation li {
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 28px;
 }
 
 .footer-navigation li:first-child {
@@ -299,22 +328,21 @@ main .btn:hover {
     margin-left: 41%;
 }
 
-@media screen and (min-width: 601px) and (max-width: 980px) {
+@media screen and (min-width: 701px) and (max-width: 980px) {
     .items-list {
-        top: -40px;
-        margin-bottom: 0;
+        height: 800px;
     }
-    main img {
-        width: 100%;
-        height: auto;
+    .items-list .container {
+        top: 20px;
     }
-    main h3 {
-        font-size: 24px;
+    .top-items {
+        width: 680px;
     }
-    .items-list .btn {
-        width: 80%;
-        height: 30%;
-        margin-left: 7%;
+    .top-items li {
+        margin-left: 10px;
+    }
+    .benefits {
+        margin-top: 0;
     }
     .benefits-text {
         margin-right: auto;
@@ -325,11 +353,27 @@ main .btn:hover {
     }
 }
 
-@media screen and (min-width: 200px) and (max-width: 600px) {
+@media screen and (min-width: 200px) and (max-width: 700px) {
+    .logo {
+        top: 5px;
+    }
+    .ellipse {
+        display: none;
+    }
     .main-navigation {
+        position: relative;
         width: 100%;
         margin-top: 250px;
         text-align: center;
+    }
+    .main-menu {
+        display: none;
+    }
+    .mobile-menu {
+        position: absolute;
+        top: -40px;
+        left: 10px;
+        display: block;
     }
     .main-navigation li {
         display: block;
@@ -344,9 +388,11 @@ main .btn:hover {
         margin-bottom: 40px;
     }
     .items-list {
-        top: 0;
-        margin-bottom: 40px;
+        height: 2300px;
         border-top: 1px solid transparent;
+    }
+    .items-list .container {
+        top: -60px;
     }
     .items-list li {
         display: block;
@@ -359,7 +405,7 @@ main .btn:hover {
         margin-left: auto;
     }
     .benefits-text {
-        width: 100%;
+        width: 90%;
         margin-top: 50px;
         margin-left: 10px;
     }
